@@ -1,0 +1,4 @@
+hello
+
+git diff file-name => shows the changes done in a file
+git checkout filename => rollback the file to the last version
