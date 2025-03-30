@@ -23,15 +23,15 @@ function App() {
 
   ])
 
-  const Todo = ({todo}) => {
-    return (<>
-    <div className="m-4 border-1 border-purple-400">
+  // const Todo = ({todo}) => {
+  //   return (<>
+  //   <div className="m-4 border-1 border-purple-400">
 
-      <div className="todo">{todo.title}</div>
-      <div className="todo">{todo.desc}</div>
-    </div>
-      </>)
-  }
+  //     <div className="todo">{todo.title}</div>
+  //     <div className="todo">{todo.desc}</div>
+  //   </div>
+  //     </>)
+  // }
   return (
     <>
       <div>
@@ -47,11 +47,13 @@ function App() {
       {showbtn && <button>Shown only when 2nd button is clicked</button>}
       {todos.map(todo => {
         // return <Todo key={todo.title} todo={todo}/>
-        return <div key={todo.title} className="m-4 border-1 border-purple-400">
+        return(
+          <div key={todo.title} className="m-4 border-1 border-purple-400">
 
           <div className="todo">{todo.title}</div>
           <div className="todo">{todo.desc}</div>
         </div>
+        )
       })}
 
       <div className="card">
